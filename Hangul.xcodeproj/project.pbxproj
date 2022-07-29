@@ -113,6 +113,7 @@
 		84BCC5D12880728C001EF868 /* Hangul */ = {
 			isa = PBXGroup;
 			children = (
+				DEA0A1AA28942E2100182BE8 /* Dependencies */,
 				DE6480102881A8CA00549BEA /* Model */,
 				84BCC60A2880B9D6001EF868 /* View */,
 				DE64800F2881A8A500549BEA /* ViewModel */,
@@ -186,6 +187,13 @@
 				DE6480112881A8F200549BEA /* SpeachModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DEA0A1AA28942E2100182BE8 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,7 +516,7 @@
 				DEVELOPMENT_TEAM = J2C42ST93X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hangul/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Roy Lee";
+				INFOPLIST_KEY_CFBundleDisplayName = Hangul;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -538,7 +546,7 @@
 				DEVELOPMENT_TEAM = J2C42ST93X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hangul/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Roy Lee";
+				INFOPLIST_KEY_CFBundleDisplayName = Hangul;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

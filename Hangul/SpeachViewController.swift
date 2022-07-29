@@ -30,19 +30,23 @@ class SpeachViewController: UIViewController {
 
 extension SpeachViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.getSelectedDataComponent(segmentView.selectedSegmentIndex, combinedSegmentView.selectedSegmentIndex).count
+        viewModel.getNumberOfRows(segmentView.selectedSegmentIndex, section)
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        viewModel.getNumberOfSections(segmentView.selectedSegmentIndex)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LetterCollectionViewCell.reuseIdentifier, for: indexPath) as! LetterCollectionViewCell
-        let element = viewModel.getElement(segmentView.selectedSegmentIndex, detailSegmentIndex: combinedSegmentView.selectedSegmentIndex, at: indexPath.row)
+        let element = viewModel.getElement(segmentView.selectedSegmentIndex, indexPath)
         cell.titleLabel.text = element
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let element = viewModel.getElement(segmentView.selectedSegmentIndex, detailSegmentIndex: combinedSegmentView.selectedSegmentIndex, at: indexPath.row)
+        let element = viewModel.getElement(segmentView.selectedSegmentIndex, indexPath)
         viewModel.startSpeakInput(element)
     }
 }

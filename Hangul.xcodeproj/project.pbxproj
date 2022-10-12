@@ -23,6 +23,7 @@
 		84BCC6112880C957001EF868 /* MaruBuri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84BCC60F2880C957001EF868 /* MaruBuri-Regular.ttf */; };
 		84BCC6142880CA81001EF868 /* PhonologyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCC6132880CA81001EF868 /* PhonologyManager.swift */; };
 		DE6480122881A8F200549BEA /* SpeachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6480112881A8F200549BEA /* SpeachModel.swift */; };
+		DEA0A1AC289474B100182BE8 /* SpeechOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA0A1AB289474B100182BE8 /* SpeechOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		84BCC60F2880C957001EF868 /* MaruBuri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Regular.ttf"; sourceTree = "<group>"; };
 		84BCC6132880CA81001EF868 /* PhonologyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonologyManager.swift; sourceTree = "<group>"; };
 		DE6480112881A8F200549BEA /* SpeachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeachModel.swift; sourceTree = "<group>"; };
+		DEA0A1AB289474B100182BE8 /* SpeechOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				84BCC6132880CA81001EF868 /* PhonologyManager.swift */,
+				DEA0A1AB289474B100182BE8 /* SpeechOperation.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BCC60C2880C18B001EF868 /* SpeachViewModel.swift in Sources */,
+				DEA0A1AC289474B100182BE8 /* SpeechOperation.swift in Sources */,
 				DE6480122881A8F200549BEA /* SpeachModel.swift in Sources */,
 				84BCC6142880CA81001EF868 /* PhonologyManager.swift in Sources */,
 				84BCC60828808644001EF868 /* LetterCollectionViewCell.swift in Sources */,

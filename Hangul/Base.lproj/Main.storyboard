@@ -71,18 +71,32 @@
                                     <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pZM-sr-RsW"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-N9-FR4">
+                                <rect key="frame" x="933" y="716" width="41" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="playAllLetters:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JtK-hJ-t0d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="z5x-2F-ont" firstAttribute="top" secondItem="ufu-47-rSu" secondAttribute="bottom" constant="30" id="1Va-Wa-ApL"/>
                             <constraint firstItem="g6y-S8-IJ0" firstAttribute="top" secondItem="z5x-2F-ont" secondAttribute="bottom" constant="50" id="56I-ID-dbA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EOt-N9-FR4" secondAttribute="trailing" constant="50" id="7Hh-gc-xB0"/>
+                            <constraint firstItem="EOt-N9-FR4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="696" id="8oE-Nx-Q9c"/>
                             <constraint firstItem="g6y-S8-IJ0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E3G-mA-xud"/>
+                            <constraint firstItem="EOt-N9-FR4" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.0400391" id="OTy-wX-Ftj"/>
                             <constraint firstItem="ufu-47-rSu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PT2-wE-UpK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z5x-2F-ont" secondAttribute="trailing" constant="50" id="RNt-Bq-m9u"/>
+                            <constraint firstItem="EOt-N9-FR4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="933" id="VYY-OD-dpX"/>
                             <constraint firstItem="z5x-2F-ont" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Vfc-3O-cHy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EOt-N9-FR4" secondAttribute="bottom" constant="21" id="koS-Ue-iue"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g6y-S8-IJ0" secondAttribute="bottom" constant="21" id="xqx-qq-PdS"/>
                             <constraint firstItem="ufu-47-rSu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="ydL-XQ-zDY"/>
+                            <constraint firstItem="EOt-N9-FR4" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.0414439" id="yfb-f1-log"/>
                         </constraints>
                     </view>
                     <connections>
@@ -97,6 +111,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

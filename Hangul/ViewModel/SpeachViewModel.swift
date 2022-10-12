@@ -8,15 +8,15 @@
 import Foundation
 
 class SpeachViewModel: NSObject {
-    private let kVowels = ["ㅏ", "ㅑ", "ㅓ", "ㅕ", "ㅗ", "ㅛ", "ㅜ", "ㅠ", "ㅡ", "ㅣ"]
-    private let kConconants = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅌ", "ㅋ", "ㅍ", "ㅎ", "ㄲ", "ㄸ", "ㅃ", "ㅆ", "ㅉ"]
+    private let vowels = ["ㅏ", "ㅑ", "ㅓ", "ㅕ", "ㅗ", "ㅛ", "ㅜ", "ㅠ", "ㅡ", "ㅣ"]
+    private let conconants = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅌ", "ㅋ", "ㅍ", "ㅎ", "ㄲ", "ㄸ", "ㅃ", "ㅆ", "ㅉ"]
     private var composedAllElements = [[String]]()
     
     override init() {
         super.init()
-        for vowel in kVowels {
+        for vowel in vowels {
             var composedElements = [String]()
-            for conconant in kConconants {
+            for conconant in conconants {
                 let composeElement = getComposedString(vowel, conconant)
                 composedElements.append(composeElement)
              }
@@ -34,9 +34,9 @@ class SpeachViewModel: NSObject {
         
         switch segment {
         case 0:
-            rows = kVowels.count
+            rows = vowels.count
         case 1:
-            rows = kConconants.count
+            rows = conconants.count
         case 2:
             rows = composedAllElements[section].count
         default:
@@ -50,18 +50,17 @@ class SpeachViewModel: NSObject {
         (conconant + vowel).precomposedStringWithCompatibilityMapping
     }
     
-    func getElement(_ segment: Int, _ at: IndexPath) -> String {
+    func getElement(_ segment: Int, _ segment2: Int, _ at: IndexPath) -> String {
         let row = at.row
-        let column = at.section
         let element: String
         
         switch segment {
         case 0:
-            element = kVowels[row]
+            element = vowels[row]
         case 1:
-            element = kConconants[row]
+            element = conconants[row]
         case 2:
-            element = composedAllElements[column][row¡]
+            element = composedAllElements[segment2][row]
         default:
             element = ""
         }
@@ -70,6 +69,25 @@ class SpeachViewModel: NSObject {
     }
     
     func startSpeakInput(_ input: String) {
-        PhonologyManager.shared.speachSynthesizer(input)
+        PhonologyManager.shared.speechOut(input)
+    }
+    
+    func playAll(_ segment: Int, _ segment2: Int) {
+        let component: [String]
+        
+        switch segment {
+        case 0:
+            component = vowels
+        case 1:
+            component = conconants
+        case 2:
+            component = composedAllElements[segment2]
+        default:
+            component = [""]
+        }
+        
+        PhonologyManager.shared.speechOut(component) { synthesizer, utter, played in
+            
+        }
     }
 }
